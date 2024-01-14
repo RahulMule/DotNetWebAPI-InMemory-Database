@@ -23,6 +23,16 @@ namespace DotNetWebAPI_InMemoryDatabase.Services
 
         }
 
+        public void DeleteBook(int bookid)
+        {
+            var book = _context.Books.FirstOrDefault(x => x.Id == bookid);
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                _context.SaveChanges();
+            }
+
+        }
 
         public IEnumerable<Book> GetAllBooks()
         {
@@ -38,5 +48,19 @@ namespace DotNetWebAPI_InMemoryDatabase.Services
 
         }
 
+        public Book GetBook(int bookid)
+        {
+            Book book = _context.Books.FirstOrDefault(book => book.Id == bookid);
+            if (book != null)
+            {
+                return book;
+            }return null;
+        }
+
+        public void UpdateBook(Book book)
+        {
+            _context.Update(book);
+            _context.SaveChanges(true);
+        }
     }
 }
