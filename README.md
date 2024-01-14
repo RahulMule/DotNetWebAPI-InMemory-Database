@@ -20,6 +20,9 @@ The project is a RESTful Web API that provides endpoints to perform CRUD operati
 
 - **Get All Books**: Retrieve a list of all books.
 - **Add Book**: Add a new book to the database.
+- **Delete Book**: Delete a book by its ID.
+- **Update Book**: Update an existing book.
+- **Get Book by ID**: Retrieve a specific book by its ID.
 
 ## Prerequisites
 
@@ -58,6 +61,39 @@ The API provides the following endpoints:
         "description": "A novel by F. Scott Fitzgerald",
         "author": "F. Scott Fitzgerald",
         "price": 10.99
+    }
+    ```
+
+    Example Response:
+    ```json
+    {
+        "status": "OK"
+    }
+    ```
+- **GET /api/books/{id}**: Retrieve a specific book by its ID.
+
+    Example Response:
+    ```json
+    {
+        "id": 1,
+        "title": "The Great Gatsby",
+        "description": "A novel by F. Scott Fitzgerald",
+        "author": "F. Scott Fitzgerald",
+        "price": 10.99
+    }
+    ```
+- **DELETE /api/books/{id}**: Delete a book by its ID.
+
+- **PUT /api/books**: Update an existing book.
+
+    Example Request:
+    ```json
+    {
+        "id": 1,
+        "title": "New Title",
+        "description": "Updated description",
+        "author": "Updated Author",
+        "price": 19.99
     }
     ```
 
