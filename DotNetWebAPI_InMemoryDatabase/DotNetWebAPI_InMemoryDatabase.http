@@ -1,0 +1,6 @@
+@DotNetWebAPI_InMemoryDatabase_HostAddress = http://localhost:5084
+
+GET {{DotNetWebAPI_InMemoryDatabase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
