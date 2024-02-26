@@ -21,7 +21,7 @@ namespace DotNetWebAPI_InMemoryDatabase.Controllers
             return Ok(books);
         }
         [HttpPost]
-        public IActionResult AddBook(Book book) 
+        public IActionResult AddBook(Book book)
         {
             _books.AddBook(book);
             return Ok();
