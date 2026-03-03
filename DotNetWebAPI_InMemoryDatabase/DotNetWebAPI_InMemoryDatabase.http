@@ -1,6 +1,20 @@
 @DotNetWebAPI_InMemoryDatabase_HostAddress = http://localhost:5084
 
-GET {{DotNetWebAPI_InMemoryDatabase_HostAddress}}/weatherforecast/
+### Get Weather Forecast (Local)
+GET https://adasdasdasdaw-gdaae7fpdec7aag9.eastus2-01.azurewebsites.net/api/Books
 Accept: application/json
 
 ###
+
+### Create Book (Azure API)
+POST https://adasdasdasdaw-gdaae7fpdec7aag9.eastus2-01.azurewebsites.net/api/Books
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 0,
+  "title": "Sample Book Title",
+  "description": "This is a sample book description.",
+  "author": "John Doe",
+  "price": 19.99
+}
