@@ -13,7 +13,7 @@ Accept: application/json
 
 {
   "id": 0,
-  "title": "Sample Book Title",
+  "title": "Sample Book Title3",
   "description": "This is a sample book description.",
   "author": "John Doe",
   "price": 19.99
